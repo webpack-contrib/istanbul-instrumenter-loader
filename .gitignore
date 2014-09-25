@@ -1,0 +1,5 @@
+node_modules/
+tmp/
+*.sublime-*
+*.log
+.DS_Store
