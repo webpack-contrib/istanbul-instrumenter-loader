@@ -8,5 +8,9 @@ module.exports = function(source) {
         noAutoWrap: true
     });
 
+    if (this.cacheable) {
+        this.cacheable();
+    }
+
     return instrumenter.instrumentSync(source, this.request);
 };
