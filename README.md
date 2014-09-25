@@ -44,7 +44,7 @@ config.set({
     webpack: {
         ...
         module: {
-            preLoaders: [ { // << add istanbul-instrumenter-loader as webpack's preloader
+            preLoaders: [ { // << add istanbul-instrumenter as webpack's preloader
                 test: /\.js$/,
                 exclude: /(test|node_modules|bower_components)\//,
                 loader: 'istanbul-instrumenter-loader'
