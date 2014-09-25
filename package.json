@@ -1,5 +1,5 @@
 {
-  "name": "istanbul-loader",
+  "name": "istanbul-instrumenter-loader",
   "version": "0.1.0",
   "description": "istanbul instrumenter loader for webpack",
   "keywords": [
