@@ -32,7 +32,7 @@ config.set({
     ],
     ...
     preprocessors: {
-        // 'src/**/*.js': ['coverage'] << and this too
+        // 'src/**/*.js': ['coverage'], << and this too
         'test/**/*.js': [ 'webpack' ]
     },
     reporters: [ 'progress', 'coverage' ],
@@ -44,7 +44,7 @@ config.set({
     webpack: {
         ...
         module: {
-            preLoaders: [ { // << add istanbul-instrumenter as webpack's preloader
+            preLoaders: [ { // << add subject as webpack's preloader
                 test: /\.js$/,
                 exclude: /(test|node_modules|bower_components)\//,
                 loader: 'istanbul-instrumenter-loader'
