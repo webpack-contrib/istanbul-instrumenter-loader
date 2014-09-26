@@ -44,12 +44,12 @@ config.set({
     webpack: {
         ...
         module: {
-            preLoaders: [ { // << add subject as webpack's preloader
+            loaders: [ ... ],
+            postLoaders: [ { // << add subject as webpack's postloader
                 test: /\.js$/,
                 exclude: /(test|node_modules|bower_components)\//,
-                loader: 'istanbul-instrumenter-loader'
-            } ],
-            loaders: [ ... ]
+                loader: 'istanbul-instrumenter'
+            } ]
         },
         ...
     }
