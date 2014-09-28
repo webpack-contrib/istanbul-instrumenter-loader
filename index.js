@@ -12,5 +12,5 @@ module.exports = function(source) {
         this.cacheable();
     }
 
-    return instrumenter.instrumentSync(source, this.request);
+    return instrumenter.instrumentSync(source, this.resourcePath);
 };
