@@ -12,7 +12,7 @@ Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for 
 ### Install
 
 ```sh
-npm i -S istanbul-instrumenter-loader
+$ npm i -S istanbul-instrumenter-loader
 ```
 
 ### Usage
