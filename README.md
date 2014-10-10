@@ -4,7 +4,7 @@
 [![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
 [![peer deps](http://img.shields.io/david/peer/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=peerDependencies)
 [![dev deps](http://img.shields.io/david/dev/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=devDependencies)
-![unicorn approved](http://img.shields.io/badge/unicorn-approved-ff69b4.svg?style=flat-square)
+[![gratipay](http://img.shields.io/gratipay/deepsweet.svg?style=flat-square)](https://gratipay.com/deepsweet/)
 
 Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.<br/>
 "Forked" from [unfold/istanbul-instrument-loader](https://github.com/unfold/istanbul-instrument-loader).
