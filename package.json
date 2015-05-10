@@ -20,8 +20,13 @@
     "url": "https://github.com/deepsweet"
   },
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "istanbul": "^0.3.2"
+  },
   "peerDependencies": {
-    "istanbul": "^0.3.2",
     "webpack": "^1.4.3"
   },
   "devDependencies": {
