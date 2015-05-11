@@ -134,7 +134,6 @@
     space-in-parens: 0
     space-infix-ops: 0
     space-return-throw-case: 1
-    space-unary-word-ops: 1
     max-nested-callbacks: 0
     one-var: 0
     wrap-regex: 0
