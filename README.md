@@ -9,6 +9,8 @@
 Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.<br/>
 "Forked" from [unfold/istanbul-instrument-loader](https://github.com/unfold/istanbul-instrument-loader).
 
+Using Babel to transpile ES6? Use [isparta-loader](https://github.com/deepsweet/isparta-loader) to coverage your original code.
+
 ### Install
 
 ```sh
