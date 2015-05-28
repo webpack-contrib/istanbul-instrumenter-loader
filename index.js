@@ -1,6 +1,7 @@
 'use strict';
 
 var istanbul = require('istanbul');
+var cache = {};
 
 module.exports = function(source) {
     var instrumenter = new istanbul.Instrumenter({
@@ -12,5 +13,9 @@ module.exports = function(source) {
         this.cacheable();
     }
 
-    return instrumenter.instrumentSync(source, this.resourcePath);
+    if (!cache[this.resourcePath]) {
+        cache[this.resourcePath] = instrumenter.instrumentSync(source, this.resourcePath);
+    }
+
+    return cache[this.resourcePath];
 };
