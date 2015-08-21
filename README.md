@@ -49,7 +49,7 @@ config.set({
             loaders: [ ... ],
             postLoaders: [ { // << add subject as webpack's postloader
                 test: /\.js$/,
-                exclude: /(test|node_modules|bower_components)\//,
+                exclude: [/test/, /node_modules/, /bower_components/],
                 loader: 'istanbul-instrumenter'
             } ]
         },
