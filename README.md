@@ -66,7 +66,7 @@ This file will be the only entry point for Karma:
 config.set({
     …
     files: [
-      'test/index.js'
+        'test/index.js'
     ],
     preprocessors: {
         'test/index.js': 'webpack'
@@ -75,7 +75,7 @@ config.set({
         …
         module: {
             preLoaders: [
-                // transpile and instrument only testing sources with isparta
+                // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
                     include: path.resolve('src/components/'),
