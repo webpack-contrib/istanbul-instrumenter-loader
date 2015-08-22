@@ -6,10 +6,9 @@
 [![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
 [![gratipay](http://img.shields.io/gratipay/deepsweet.svg?style=flat-square)](https://gratipay.com/deepsweet/)
 
-Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.<br/>
-"Forked" from [unfold/istanbul-instrument-loader](https://github.com/unfold/istanbul-instrument-loader).
+Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.
 
-Using Babel to transpile ES6? Use [isparta-loader](https://github.com/deepsweet/isparta-loader) to coverage your original code.
+Using Babel to transpile ES6/ES7? Use [isparta-loader](https://github.com/deepsweet/isparta-loader) to coverage your original code.
 
 ### Install
 
@@ -17,48 +16,82 @@ Using Babel to transpile ES6? Use [isparta-loader](https://github.com/deepsweet/
 $ npm i -D istanbul-instrumenter-loader
 ```
 
-### Usage
+### Setup
 
-Useful to get work together [karma-webpack](https://github.com/webpack/karma-webpack) and [karma-coverage](https://github.com/karma-runner/karma-coverage). For example:
+#### References
 
-1. [karma-webpack config](https://github.com/webpack/karma-webpack#karma-webpack)
-2. [karma-coverage config](https://github.com/karma-runner/karma-coverage#configuration)
-3. replace `karma-coverage`'s code instrumenting with `istanbul-instrumenter-loader`'s one:
+* [Using loaders](https://webpack.github.io/docs/using-loaders.html)
+* [karma-webpack](https://github.com/webpack/karma-webpack#karma-webpack)
+* [karma-coverage](https://github.com/karma-runner/karma-coverage#configuration)
 
-```javascript
+#### Project structure
+
+Let's say you have the following:
+
+```
+├── src/
+│   └── components/
+│       ├── bar/
+│       │   └── index.js
+│       └── foo/
+│           └── index.js
+└── test/
+    └── src/
+        └── components/
+            └── foo/
+                └── index.js
+```
+
+To create a code coverage report for all components (even for those for which you have no tests yet) you have to require all the 1) sources and 2) tests. Something like it's described in ["alternative usage" of karma-webpack](https://github.com/webpack/karma-webpack#alternative-usage):
+
+#### test/index.js
+
+```js
+// require all `test/components/**/index.js`
+const testsContext = require.context('./src/components/', true, /index\.js$/);
+
+testsContext.keys().forEach(testsContext);
+
+// require all `src/components/**/index.js`
+const componentsContext = require.context('../src/components/', true, /index\.js$/);
+
+componentsContext.keys().forEach(componentsContext);
+```
+
+This file will be the only entry point for Karma:
+
+#### karma.conf.js
+
+```js
 config.set({
-    ...
+    …
     files: [
-      // 'src/**/*.js', << you don't need this anymore
-      'test/**/*.js'
+      'test/index.js'
     ],
-    ...
     preprocessors: {
-        // 'src/**/*.js': ['coverage'], << and this too
-        'test/**/*.js': [ 'webpack' ]
+        'test/index.js': 'webpack'
+    },
+    webpack: {
+        …
+        module: {
+            preLoaders: [
+                // transpile and instrument only testing sources with isparta
+                {
+                    test: /\.js$/,
+                    include: path.resolve('src/components/'),
+                    loader: 'istanbul-instrumenter'
+                }
+            ]
+        }
+        …
     },
     reporters: [ 'progress', 'coverage' ],
     coverageReporter: {
-        type: 'html',
-        dir: 'coverage/'
+        type: 'text'
     },
-    ...
-    webpack: {
-        ...
-        module: {
-            loaders: [ ... ],
-            postLoaders: [ { // << add subject as webpack's postloader
-                test: /\.js$/,
-                exclude: /(test|node_modules|bower_components)\//,
-                loader: 'istanbul-instrumenter'
-            } ]
-        },
-        ...
-    }
+    …
 });
 ```
-
-[Documentation: Using loaders](https://webpack.github.io/docs/using-loaders.html).
 
 ### License
 [WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)
