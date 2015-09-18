@@ -1,10 +1,7 @@
 ## Istanbul instrumenter loader for [webpack](https://webpack.github.io/)
 
 [![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
-[![travis](http://img.shields.io/travis/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://travis-ci.org/deepsweet/istanbul-instrumenter-loader)
-[![climate](http://img.shields.io/codeclimate/github/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://codeclimate.com/github/deepsweet/istanbul-instrumenter-loader/code)
 [![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
-[![gratipay](http://img.shields.io/gratipay/deepsweet.svg?style=flat-square)](https://gratipay.com/deepsweet/)
 
 Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.
 
