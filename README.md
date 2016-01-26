@@ -45,7 +45,7 @@ To create a code coverage report for all components (even for those for which yo
 
 ```js
 // require all `test/components/**/index.js`
-const testsContext = require.context('./src/components/', true, /index\.js$/);
+const testsContext = require.context('./test/components/', true, /index\.js$/);
 
 testsContext.keys().forEach(testsContext);
 
