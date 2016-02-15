@@ -1,6 +1,6 @@
 {
   "name": "istanbul-instrumenter-loader",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Istanbul instrumenter loader for webpack",
   "keywords": [ "webpack", "loader", "istanbul", "coverage" ],
   "homepage": "https://github.com/deepsweet/istanbul-instrumenter-loader",
