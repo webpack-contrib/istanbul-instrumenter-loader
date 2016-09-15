@@ -98,7 +98,7 @@ coverageVariable: "__coverage__",
 preserveComments: false,
 compact: true,
 esModules: false,
-autoWrap: true,
+autoWrap: false,
 produceSourceMap: false,
 sourceMapUrlCallback: null,
 debug: false
