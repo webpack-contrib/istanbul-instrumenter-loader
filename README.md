@@ -5,8 +5,6 @@
 
 Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.
 
-Using Babel to transpile ES6/ES7? Use [isparta-loader](https://github.com/deepsweet/isparta-loader) to coverage your original code.
-
 ### Install
 
 ```sh
@@ -90,5 +88,37 @@ config.set({
 });
 ```
 
+#### Options
+The loader supports all options supported by `istanbul-lib-instrument`. 
+
+The default options are
+
+```js
+coverageVariable: "__coverage__",
+preserveComments: false,
+compact: true,
+esModules: false,
+autoWrap: true,
+produceSourceMap: false,
+sourceMapUrlCallback: null,
+debug: false
+```
+
+E.g. if a project using ES6 modules is instrumented, the `esModules` options must be set to `true`:
+
+```js
+{
+	module: {
+	  postLoaders: [
+	    {
+				test: /\.ts$/,
+				loader: "istanbul-instrumenter?esModules=true",
+				include: path.resolve("./src"),
+			}
+		]
+	}
+}
+```
+        
 ### License
 [WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)
