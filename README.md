@@ -3,7 +3,7 @@
 [![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
 [![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
 
-Instrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.
+Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) (ES6+ ready using Babel) for subsequent code coverage reporting.
 
 ### Install
 
@@ -69,7 +69,7 @@ config.set({
     webpack: {
         …
         module: {
-            preLoaders: [
+            postLoaders: [
                 // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
@@ -89,36 +89,33 @@ config.set({
 ```
 
 #### Options
-The loader supports all options supported by `istanbul-lib-instrument`. 
-
-The default options are
-
-```js
-coverageVariable: "__coverage__",
-preserveComments: false,
-compact: true,
-esModules: false,
-autoWrap: false,
-produceSourceMap: false,
-sourceMapUrlCallback: null,
-debug: false
-```
-
-E.g. if a project using ES6 modules is instrumented, the `esModules` options must be set to `true`:
+The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/37a0087e68729dae46989c3687272d154938fa9e/src/instrumenter.js#L28-L37). The defaults are:
 
 ```js
 {
-	module: {
-	  postLoaders: [
-	    {
-				test: /\.ts$/,
-				loader: "istanbul-instrumenter?esModules=true",
-				include: path.resolve("./src"),
-			}
-		]
-	}
+    coverageVariable: '__coverage__',
+    preserveComments: false,
+    compact: true,
+    esModules: false,
+    autoWrap: false,
+    produceSourceMap: false,
+    sourceMapUrlCallback: null,
+    debug: false
 }
 ```
-        
+
+E.g. if a project is using ES6 modules then `esModules` option must be set to `true`:
+
+```js
+{
+    test: /\.js$/,
+    include: path.resolve('src/components/'),
+    loader: 'istanbul-instrumenter',
+    query: {
+        esModules: true
+    }
+}
+```
+
 ### License
 [WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)
