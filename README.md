@@ -53,9 +53,11 @@ const componentsContext = require.context('../src/components/', true, /index\.js
 componentsContext.keys().forEach(componentsContext);
 ```
 
-This file will be the only entry point for Karma:
+This file will be the only entry point for Karma.
 
 #### karma.conf.js
+
+Config example for ES6+ code transpiled with Babel:
 
 ```js
 config.set({
@@ -70,11 +72,23 @@ config.set({
         …
         module: {
             preLoaders: [
+                // transpile all files except testing sources with babel as usual
+                {
+                    test: /\.js$/,
+                    exclude: [
+                        path.resolve('src/components/'),
+                        path.resolve('node_modules/')
+                    ],
+                    loader: 'babel'
+                },
                 // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
                     include: path.resolve('src/components/'),
-                    loader: 'istanbul-instrumenter'
+                    loader: 'istanbul-instrumenter',
+                    query: {
+                        esModules: true
+                    }
                 }
             ]
         }
@@ -101,19 +115,6 @@ The loader supports all options supported by [istanbul-lib-instrument](https://g
     produceSourceMap: false,
     sourceMapUrlCallback: null,
     debug: false
-}
-```
-
-E.g. if a project is using ES6 modules then `esModules` option must be set to `true`:
-
-```js
-{
-    test: /\.js$/,
-    include: path.resolve('src/components/'),
-    loader: 'istanbul-instrumenter',
-    query: {
-        esModules: true
-    }
 }
 ```
 
