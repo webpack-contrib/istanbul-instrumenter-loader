@@ -69,7 +69,7 @@ config.set({
     webpack: {
         …
         module: {
-            postLoaders: [
+            preLoaders: [
                 // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
