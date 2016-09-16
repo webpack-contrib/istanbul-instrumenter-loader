@@ -42,12 +42,12 @@ To create a code coverage report for all components (even for those for which yo
 #### test/index.js
 
 ```js
-// require all `test/components/**/index.js`
+// require all `project/test/src/components/**/index.js`
 const testsContext = require.context('./src/components/', true, /index\.js$/);
 
 testsContext.keys().forEach(testsContext);
 
-// require all `src/components/**/index.js`
+// require all `project/src/components/**/index.js`
 const componentsContext = require.context('../src/components/', true, /index\.js$/);
 
 componentsContext.keys().forEach(componentsContext);
@@ -72,14 +72,17 @@ config.set({
         …
         module: {
             preLoaders: [
-                // transpile all files except testing sources with babel as usual
+                // transpile all files except testing sources with Babel
                 {
                     test: /\.js$/,
                     exclude: [
                         path.resolve('src/components/'),
                         path.resolve('node_modules/')
                     ],
-                    loader: 'babel'
+                    loader: 'babel',
+                    query: {
+                        cacheDirectory: true
+                    }
                 },
                 // instrument only testing sources with Istanbul
                 {
