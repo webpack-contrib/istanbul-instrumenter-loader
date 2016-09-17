@@ -106,20 +106,7 @@ config.set({
 ```
 
 #### Options
-The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/37a0087e68729dae46989c3687272d154938fa9e/src/instrumenter.js#L28-L37). The defaults are:
-
-```js
-{
-    coverageVariable: '__coverage__',
-    preserveComments: false,
-    compact: true,
-    esModules: false,
-    autoWrap: false,
-    produceSourceMap: false,
-    sourceMapUrlCallback: null,
-    debug: false
-}
-```
+The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter).
 
 ### License
 [WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)
