@@ -3,7 +3,7 @@
 [![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
 [![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
 
-Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) (ES6+ ready using Babel) for subsequent code coverage reporting.
+Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) for subsequent code coverage reporting.
 
 ### Install
 
@@ -57,8 +57,6 @@ This file will be the only entry point for Karma.
 
 #### karma.conf.js
 
-Config example for ES6+ code transpiled with Babel:
-
 ```js
 config.set({
     …
@@ -72,26 +70,11 @@ config.set({
         …
         module: {
             preLoaders: [
-                // transpile all files except testing sources with Babel
-                {
-                    test: /\.js$/,
-                    exclude: [
-                        path.resolve('src/components/'),
-                        path.resolve('node_modules/')
-                    ],
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true
-                    }
-                },
                 // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
                     include: path.resolve('src/components/'),
-                    loader: 'istanbul-instrumenter',
-                    query: {
-                        esModules: true
-                    }
+                    loader: 'istanbul-instrumenter'
                 }
             ]
         }
@@ -106,7 +89,7 @@ config.set({
 ```
 
 #### Options
-The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter). Please note the `esModules` option – you have to manually set it to `true` if you want to instrument ES6 modules.
+The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter).
 
 ### License
 [WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)
