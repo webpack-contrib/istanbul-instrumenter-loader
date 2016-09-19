@@ -5,6 +5,8 @@
 
 Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) for subsequent code coverage reporting.
 
+It's not "ES6 ready" yet, see [#33](https://github.com/deepsweet/istanbul-instrumenter-loader/issues/33) for some technical details.
+
 ### Install
 
 ```sh
