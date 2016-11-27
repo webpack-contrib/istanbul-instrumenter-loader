@@ -17,5 +17,5 @@ module.exports = function(source, sourceMap) {
     var that = this;
     return instrumenter.instrument(source, this.resourcePath, function (error, source) {
         that.callback(error, source, instrumenter.lastSourceMap());
-    });
+    }, sourceMap);
 };
