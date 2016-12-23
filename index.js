@@ -3,14 +3,13 @@
 var istanbulLibInstrument = require('istanbul-lib-instrument');
 var loaderUtils = require('loader-utils');
 var assign = require('object-assign');
-
-var sourceMapRegEx = /(?:\/{2}[#@]{1,2}|\/\*)\s+sourceMappingURL\s*=\s*(data:(?:[^;]+;)+base64,)?(\S+)/;
+var convert = require('convert-source-map');
 
 module.exports = function(source, sourceMap) {
-    // use inline source map, if any    
-    var match = sourceMapRegEx.exec(source);
-    if (!sourceMap && match[1] && match[2]) {
-        sourceMap = JSON.parse(new Buffer(match[2], 'base64').toString('utf8'));
+    // use inline source map, if any
+    var inlineSourceMap = convert.fromSource(source);
+    if (!sourceMap && inlineSourceMap) {
+        sourceMap = inlineSourceMap.sourcemap;
     }
 
     var userOptions = loaderUtils.parseQuery(this.query);
