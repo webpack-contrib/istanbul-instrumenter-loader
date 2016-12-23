@@ -1,6 +1,6 @@
 {
   "name": "istanbul-instrumenter-loader",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Istanbul instrumenter loader for webpack",
   "keywords": [
     "webpack",
