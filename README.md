@@ -69,12 +69,12 @@ config.set({
     webpack: {
         …
         module: {
-            preLoaders: [
+            rules: [
                 // instrument only testing sources with Istanbul
                 {
                     test: /\.js$/,
                     include: path.resolve('src/components/'),
-                    loader: 'istanbul-instrumenter'
+                    loader: 'istanbul-instrumenter-loader'
                 }
             ]
         }
