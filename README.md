@@ -84,7 +84,8 @@ config.set({
     },
     reporters: [ 'progress', 'coverage-istanbul' ],
     coverageIstanbulReporter: {
-        reports: [ 'text-summary' ]
+        reports: [ 'text-summary' ],
+        fixWebpackSourcePaths: true
     },
     …
 });
