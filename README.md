@@ -1,4 +1,4 @@
-## Istanbul instrumenter loader for [webpack](https://webpack.github.io/)
+## Istanbul instrumenter loader for [webpack](https://webpack.js.org/)
 
 [![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
 [![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
@@ -8,16 +8,18 @@ Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs
 ### Install
 
 ```sh
-$ npm i -D istanbul-instrumenter-loader
+npm install --save-dev istanbul-instrumenter-loader
+# or
+yarn add --dev istanbul-instrumenter-loader
 ```
 
 ### Setup
 
 #### References
 
-* [Using loaders](https://webpack.github.io/docs/using-loaders.html)
-* [karma-webpack](https://github.com/webpack/karma-webpack#karma-webpack)
-* [karma-coverage](https://github.com/karma-runner/karma-coverage#configuration)
+* [Loaders](https://webpack.js.org/concepts/loaders/)
+* [karma-webpack](https://github.com/webpack/karma-webpack)
+* [karma-coverage-istanbul-reporter](https://github.com/mattlewis92/karma-coverage-istanbul-reporter)
 
 #### Project structure
 
@@ -80,9 +82,9 @@ config.set({
         }
         …
     },
-    reporters: [ 'progress', 'coverage' ],
-    coverageReporter: {
-        type: 'text'
+    reporters: [ 'progress', 'coverage-istanbul' ],
+    coverageIstanbulReporter: {
+        reports: [ 'text-summary' ]
     },
     …
 });
