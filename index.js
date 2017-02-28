@@ -12,7 +12,7 @@ module.exports = function(source, sourceMap) {
         sourceMap = inlineSourceMap.sourcemap;
     }
 
-    var userOptions = loaderUtils.parseQuery(this.query);
+    var userOptions = loaderUtils.getOptions(this) || {};
     var instrumenter = istanbulLibInstrument.createInstrumenter(
         assign({ produceSourceMap: this.sourceMap }, userOptions)
     );
