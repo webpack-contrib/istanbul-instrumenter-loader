@@ -1,19 +1,29 @@
-## Istanbul instrumenter loader for [webpack](https://webpack.js.org/)
+[![npm][npm]][npm-url]
+[![node][node]][node-url]
+[![deps][deps]][deps-url]
+[![tests][tests]][tests-url]
+[![coverage][cover]][cover-url]
+[![chat][chat]][chat-url]
 
-[![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)
-[![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)
+<div align="center">
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" height="200"
+      src="https://webpack.js.org/assets/icon-square-big.svg">
+  </a>
+  <h1>Istanbul Instrumenter Loader</h1>
+</div>
 
 Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) for subsequent code coverage reporting.
 
-### Install
+<h2 align="center">Install</h2>
 
-```sh
+```bash
 npm install --save-dev istanbul-instrumenter-loader
 # or
 yarn add --dev istanbul-instrumenter-loader
 ```
 
-### Setup
+<h2 align="center">Usage</h2>
 
 #### References
 
@@ -94,5 +104,51 @@ config.set({
 #### Options
 The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter).
 
-### License
-MIT
+<h2 align="center">Contributing</h2>
+
+Don't hesitate to create a pull request. Every contribution is appreciated. In development you can start the tests by calling `npm test`.
+
+<h2 align="center">Maintainers</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars.githubusercontent.com/sokra?v=3">
+        <br />
+        <a href="https://github.com/">Tobias Koppers</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars.githubusercontent.com/SpaceK33z?v=3">
+        <br />
+        <a href="https://github.com/">Kees Kluskens</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars.githubusercontent.com/mobitar?v=3">
+        <br />
+        <a href="https://github.com/">Mo Bitar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+[npm]: https://img.shields.io/npm/v/istanbul-instrumenter-loader.svg
+[npm-url]: https://npmjs.com/package/istanbul-instrumenter-loader
+
+[node]: https://img.shields.io/node/v/istanbul-instrumenter-loader.svg
+[node-url]: https://nodejs.org
+
+[deps]: https://david-dm.org/webpack-contrib/istanbul-instrumenter-loader.svg
+[deps-url]: https://david-dm.org/webpack-contrib/istanbul-instrumenter-loader
+
+[tests]: http://img.shields.io/travis/webpack-contrib/istanbul-instrumenter-loader.svg
+[tests-url]: https://travis-ci.org/webpack-contrib/istanbul-instrumenter-loader
+
+[cover]: https://coveralls.io/repos/github/webpack-contrib/istanbul-instrumenter-loader/badge.svg
+[cover-url]: https://coveralls.io/github/webpack-contrib/istanbul-instrumenter-loader
+
+[chat]: https://badges.gitter.im/webpack/webpack.svg
+[chat-url]: https://gitter.im/webpack/webpack
