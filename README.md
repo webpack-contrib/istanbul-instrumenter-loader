@@ -159,8 +159,8 @@ Don't hesitate to create a pull request. Every contribution is appreciated. In d
 [tests]: http://img.shields.io/travis/webpack-contrib/istanbul-instrumenter-loader.svg
 [tests-url]: https://travis-ci.org/webpack-contrib/istanbul-instrumenter-loader
 
-[cover]: https://coveralls.io/repos/github/webpack-contrib/istanbul-instrumenter-loader/badge.svg
-[cover-url]: https://coveralls.io/github/webpack-contrib/istanbul-instrumenter-loader
+[cover]: https://codecov.io/gh/webpack-contrib/istanbul-instrumenter-loader/branch/master/graph/badge.svg
+[cover-url]: https://codecov.io/gh/webpack-contrib/istanbul-instrumenter-loader
 
 [chat]: https://badges.gitter.im/webpack/webpack.svg
 [chat-url]: https://gitter.im/webpack/webpack
