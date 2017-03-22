@@ -21,13 +21,13 @@
     "loader-utils": "^1.1.0"
   },
   "engines": {
-    "node": ">=4.3 <5.0.0 || >=5.10"
+    "node": ">= 4.3 < 5.0.0 || >= 5.10"
   },
   "license": "MIT",
   "scripts": {
     "webpack-defaults": "webpack-defaults",
     "start": "yarn run serve:dev src",
-    "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
+    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
     "clean:dist": "del-cli dist",
     "lint": "eslint --cache src test",
     "lint-staged": "lint-staged",
@@ -60,7 +60,7 @@
     "nsp": "^2.6.3",
     "pre-commit": "^1.2.2",
     "standard-version": "^4.0.0",
-    "webpack-defaults": "^0.4.2"
+    "webpack-defaults": "^0.4.4"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
