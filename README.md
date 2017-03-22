@@ -115,24 +115,36 @@ Don't hesitate to create a pull request. Every contribution is appreciated. In d
     <tr>
       <td align="center">
         <img width="150" height="150"
-        src="https://avatars.githubusercontent.com/sokra?v=3">
-        <br />
-        <a href="https://github.com/">Tobias Koppers</a>
+        src="https://avatars.githubusercontent.com/u/266822?v=3&s=150">
+        </br>
+        <a href="https://github.com/deepsweet">Kir Belevich</a>
       </td>
       <td align="center">
         <img width="150" height="150"
-        src="https://avatars.githubusercontent.com/SpaceK33z?v=3">
-        <br />
-        <a href="https://github.com/">Kees Kluskens</a>
+        src="https://avatars3.githubusercontent.com/u/166921?v=3&s=150">
+        </br>
+        <a href="https://github.com/bebraw">Juho Vepsäläinen</a>
       </td>
       <td align="center">
         <img width="150" height="150"
-        src="https://avatars.githubusercontent.com/mobitar?v=3">
-        <br />
-        <a href="https://github.com/">Mo Bitar</a>
+        src="https://avatars2.githubusercontent.com/u/8420490?v=3&s=150">
+        </br>
+        <a href="https://github.com/d3viant0ne">Joshua Wiens</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars3.githubusercontent.com/u/533616?v=3&s=150">
+        </br>
+        <a href="https://github.com/SpaceK33z">Kees Kluskens</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars3.githubusercontent.com/u/3408176?v=3&s=150">
+        </br>
+        <a href="https://github.com/TheLarkInn">Sean Larkin</a>
       </td>
     </tr>
-  </tbody>
+  <tbody>
 </table>
 
 [npm]: https://img.shields.io/npm/v/istanbul-instrumenter-loader.svg
