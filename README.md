@@ -92,7 +92,7 @@ config.set({
 ```
 
 #### Options
-The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter).
+The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbuljs/blob/master/packages/istanbul-lib-instrument/api.md#instrumenter).
 
 ### License
 MIT
