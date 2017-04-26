@@ -91,6 +91,21 @@ config.set({
 });
 ```
 
+#### Webpack 2.0 with Babel
+
+You must run the instrumentation as a post step:
+```js
+{
+    test: /\.js$|\.jsx$/,
+    enforce: 'post',
+    loader: 'istanbul-instrumenter-loader',
+    exclude: /node_modules|\.spec\.js$/,
+    query: {
+        esModules: true
+    }
+}
+```
+
 #### Options
 The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument/blob/master/api.md#instrumenter).
 
