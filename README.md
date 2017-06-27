@@ -91,18 +91,14 @@ config.set({
 });
 ```
 
-#### Webpack 2.0 with Babel
-
+#### With babel
 You must run the instrumentation as a post step:
 ```js
 {
     test: /\.js$|\.jsx$/,
     enforce: 'post',
-    loader: 'istanbul-instrumenter-loader',
+    use: { loader: 'istanbul-instrumenter-loader', options: { esModules: true } },
     exclude: /node_modules|\.spec\.js$/,
-    query: {
-        esModules: true
-    }
 }
 ```
 
