@@ -101,6 +101,17 @@ config.set({
 });
 ```
 
+#### With babel
+You must run the instrumentation as a post step:
+```js
+{
+    test: /\.js$|\.jsx$/,
+    enforce: 'post',
+    use: { loader: 'istanbul-instrumenter-loader', options: { esModules: true } },
+    exclude: /node_modules|\.spec\.js$/,
+}
+```
+
 #### Options
 The loader supports all options supported by [istanbul-lib-instrument](https://github.com/istanbuljs/istanbuljs/blob/master/packages/istanbul-lib-instrument/api.md#instrumenter).
 
