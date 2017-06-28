@@ -13,7 +13,7 @@
   <h1>Istanbul Instrumenter Loader</h1>
 </div>
 
-Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbul-lib-instrument) for subsequent code coverage reporting.
+Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs/istanbuljs/tree/master/packages/istanbul-lib-instrument) for subsequent code coverage reporting.
 
 <h2 align="center">Install</h2>
 
