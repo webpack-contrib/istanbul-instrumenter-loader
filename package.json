@@ -10,7 +10,8 @@
   "dependencies": {
     "convert-source-map": "^1.5.0",
     "istanbul-lib-instrument": "^1.7.3",
-    "loader-utils": "^1.1.0"
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^0.3.0"
   },
   "engines": {
     "node": ">= 4.3 < 5.0.0 || >= 5.10"
@@ -18,7 +19,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build -- -w",
-    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
+    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
     "clean": "del-cli dist",
     "clean:dist": "del-cli dist",
     "lint": "eslint --cache src test",
@@ -27,15 +28,14 @@
     "prepublish": "npm run build",
     "release": "standard-version",
     "security": "nsp check",
-    "serve:dev": "nodemon $2 --exec babel-node",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "travis:coverage": "npm run test:coverage -- --runInBand",
     "travis:lint": "npm run lint && npm run security",
     "travis:test": "npm run test -- --runInBand",
-    "webpack-defaults": "webpack-defaults",
-    "appveyor:test": "npm run test"
+    "appveyor:test": "npm run test",
+    "webpack-defaults": "webpack-defaults"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -44,13 +44,13 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
-    "cross-env": "^3.2.4",
-    "del-cli": "^0.2.1",
-    "eslint": "^3.18.0",
+    "cross-env": "^5.0.1",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.2.0",
     "eslint-config-webpack": "^1.2.5",
     "eslint-plugin-import": "^2.7.0",
     "jest": "^20.0.4",
-    "lint-staged": "^3.6.1",
+    "lint-staged": "^4.0.1",
     "memory-fs": "^0.4.1",
     "nsp": "^2.6.3",
     "pre-commit": "^1.2.2",
