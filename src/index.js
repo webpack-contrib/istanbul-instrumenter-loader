@@ -1,21 +1,11 @@
 import { createInstrumenter } from 'istanbul-lib-instrument';
 import loaderUtils from 'loader-utils';
-import convert from 'convert-source-map';
 
-export default function (source, sourceMap) {
-  let srcMap = sourceMap;
-  // use inline source map, if any
-  const inlineSourceMap = convert.fromSource(source);
-  if (!srcMap && inlineSourceMap) {
-    srcMap = inlineSourceMap.sourcemap;
-  }
+export default function (source) {
+  const options = Object.assign({ produceSourceMap: true }, loaderUtils.getOptions(this));
+  const instrumenter = createInstrumenter(options);
 
-  const userOptions = loaderUtils.getOptions(this);
-  const instrumenter = createInstrumenter(
-    Object.assign({ produceSourceMap: this.srcMap }, userOptions),
-  );
-
-  return instrumenter.instrument(source, this.resourcePath, (error, source) => {
-    this.callback(error, source, instrumenter.lastSourceMap());
-  }, srcMap);
+  instrumenter.instrument(source, this.resourcePath, (error, instrumentedSource) => {
+    this.callback(error, instrumentedSource, instrumenter.lastSourceMap());
+  });
 }
