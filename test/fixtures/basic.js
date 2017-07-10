@@ -4,8 +4,4 @@ module.exports = class Foo {
     return !!this;
   }
 
-  baz() {
-    return !this.bar();
-  }
-
 };

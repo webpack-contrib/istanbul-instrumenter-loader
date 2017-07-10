@@ -8,6 +8,7 @@
     "dist"
   ],
   "dependencies": {
+    "convert-source-map": "^1.5.0",
     "istanbul-lib-instrument": "^1.7.3",
     "loader-utils": "^1.1.0"
   },
@@ -39,6 +40,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",

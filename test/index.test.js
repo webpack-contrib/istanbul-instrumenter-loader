@@ -9,7 +9,7 @@ test('instrument code', async () => {
 test('sourcemap files on by default', async () => {
   const stats = await webpack({
     extend: {
-      devtool: 'sourcemap',
+      devtool: 'source-map',
     },
   });
   const sourceMap = stats.compilation.assets['main.js.map'].source();
@@ -21,7 +21,7 @@ test('sourcemap files on by default', async () => {
 test('disabled sourcemaps', async () => {
   const stats = await webpack({
     extend: {
-      devtool: 'sourcemap',
+      devtool: 'source-map',
     },
     options: {
       produceSourceMap: false,
