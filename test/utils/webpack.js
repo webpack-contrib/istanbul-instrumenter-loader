@@ -2,13 +2,13 @@ import path from 'path';
 import webpack from 'webpack';
 import MemoryFileSystem from 'memory-fs';
 
-const loader = require.resolve('../src/cjs.js');
+const loader = require.resolve('./loader');
 
 export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
   const config = {
-    entry: path.join(__dirname, 'fixtures', fixture),
+    entry: path.join(__dirname, '..', 'fixtures', fixture),
     output: {
-      path: path.join(__dirname, 'fixtures', 'dist'),
+      path: path.join(__dirname, '..', 'fixtures', 'dist'),
     },
     module: {
       rules: [{
@@ -19,6 +19,11 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
       }],
     },
     ...extend,
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'manifest',
+      }),
+    ],
   };
 
   return new Promise((resolve, reject) => {

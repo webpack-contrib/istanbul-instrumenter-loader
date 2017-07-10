@@ -1,9 +1,8 @@
-import webpack from './webpack';
-import { stripLocalPaths } from './helpers';
+import webpack from './utils/webpack';
 
 test('instrument code', async () => {
   const stats = await webpack();
-  const instrumentedSource = stripLocalPaths(stats.compilation.assets['main.js'].source());
+  const instrumentedSource = stats.compilation.assets['main.js'].source();
   expect(instrumentedSource).toMatchSnapshot();
 });
 
