@@ -1,88 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`disabled sourcemaps 1`] = `"{\\"version\\":3,\\"sources\\":[\\"webpack:///webpack/bootstrap 1ae028e11f9e6449a2dd\\",\\"webpack:///./test/fixtures/basic.js\\"],\\"names\\":[],\\"mappings\\":\\";AAAA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;;;AAGA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,aAAK;AACL;AACA;;AAEA;AACA;AACA;AACA,mCAA2B,0BAA0B,EAAE;AACvD,yCAAiC,eAAe;AAChD;AACA;AACA;;AAEA;AACA,8DAAsD,+DAA+D;;AAErH;AACA;;AAEA;AACA;;;;;;;AC7DA,8BAA8B,uNAAuN,2GAA2G,KAAK,OAAO,gBAAgB,MAAM,kBAAkB,MAAM,OAAO,gBAAgB,MAAM,kBAAkB,MAAM,OAAO,gBAAgB,MAAM,mBAAmB,QAAQ,KAAK,2BAA2B,OAAO,gBAAgB,MAAM,iBAAiB,MAAM,OAAO,gBAAgB,MAAM,iBAAiB,QAAQ,MAAM,2BAA2B,OAAO,gBAAgB,MAAM,iBAAiB,MAAM,OAAO,gBAAgB,MAAM,iBAAiB,SAAS,aAAa,IAAI,kBAAkB,IAAI,YAAY,KAAK,4DAA4D,sCAAsC,EAAE,+CAA+C,uBAAuB,uBAAuB,oCAAoC,GAAG,sBAAsB,yBAAyB,MAAM,sBAAsB,sBAAsB,cAAc,MAAM,sBAAsB,sBAAsB,qB\\",\\"file\\":\\"main.js\\",\\"sourcesContent\\":[\\" \\\\t// The module cache\\\\n \\\\tvar installedModules = {};\\\\n\\\\n \\\\t// The require function\\\\n \\\\tfunction __webpack_require__(moduleId) {\\\\n\\\\n \\\\t\\\\t// Check if module is in cache\\\\n \\\\t\\\\tif(installedModules[moduleId]) {\\\\n \\\\t\\\\t\\\\treturn installedModules[moduleId].exports;\\\\n \\\\t\\\\t}\\\\n \\\\t\\\\t// Create a new module (and put it into the cache)\\\\n \\\\t\\\\tvar module = installedModules[moduleId] = {\\\\n \\\\t\\\\t\\\\ti: moduleId,\\\\n \\\\t\\\\t\\\\tl: false,\\\\n \\\\t\\\\t\\\\texports: {}\\\\n \\\\t\\\\t};\\\\n\\\\n \\\\t\\\\t// Execute the module function\\\\n \\\\t\\\\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\\\\n\\\\n \\\\t\\\\t// Flag the module as loaded\\\\n \\\\t\\\\tmodule.l = true;\\\\n\\\\n \\\\t\\\\t// Return the exports of the module\\\\n \\\\t\\\\treturn module.exports;\\\\n \\\\t}\\\\n\\\\n\\\\n \\\\t// expose the modules object (__webpack_modules__)\\\\n \\\\t__webpack_require__.m = modules;\\\\n\\\\n \\\\t// expose the module cache\\\\n \\\\t__webpack_require__.c = installedModules;\\\\n\\\\n \\\\t// define getter function for harmony exports\\\\n \\\\t__webpack_require__.d = function(exports, name, getter) {\\\\n \\\\t\\\\tif(!__webpack_require__.o(exports, name)) {\\\\n \\\\t\\\\t\\\\tObject.defineProperty(exports, name, {\\\\n \\\\t\\\\t\\\\t\\\\tconfigurable: false,\\\\n \\\\t\\\\t\\\\t\\\\tenumerable: true,\\\\n \\\\t\\\\t\\\\t\\\\tget: getter\\\\n \\\\t\\\\t\\\\t});\\\\n \\\\t\\\\t}\\\\n \\\\t};\\\\n\\\\n \\\\t// getDefaultExport function for compatibility with non-harmony modules\\\\n \\\\t__webpack_require__.n = function(module) {\\\\n \\\\t\\\\tvar getter = module && module.__esModule ?\\\\n \\\\t\\\\t\\\\tfunction getDefault() { return module['default']; } :\\\\n \\\\t\\\\t\\\\tfunction getModuleExports() { return module; };\\\\n \\\\t\\\\t__webpack_require__.d(getter, 'a', getter);\\\\n \\\\t\\\\treturn getter;\\\\n \\\\t};\\\\n\\\\n \\\\t// Object.prototype.hasOwnProperty.call\\\\n \\\\t__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };\\\\n\\\\n \\\\t// __webpack_public_path__\\\\n \\\\t__webpack_require__.p = \\\\\\"\\\\\\";\\\\n\\\\n \\\\t// Load entry module and return exports\\\\n \\\\treturn __webpack_require__(__webpack_require__.s = 0);\\\\n\\\\n\\\\n\\\\n// WEBPACK FOOTER //\\\\n// webpack/bootstrap 1ae028e11f9e6449a2dd\\",\\"var cov_2obfoewtj5=function(){var path=\\\\\\"/Users/mattlewis/Code/open-source/istanbul-instrumenter-loader/test/fixtures/basic.js\\\\\\",hash=\\\\\\"d160bda36fc8432c2ffbb2cefc3c20475fdbdbec\\\\\\",global=new Function('return this')(),gcv=\\\\\\"__coverage__\\\\\\",coverageData={path:\\\\\\"/Users/mattlewis/Code/open-source/istanbul-instrumenter-loader/test/fixtures/basic.js\\\\\\",statementMap:{\\\\\\"0\\\\\\":{start:{line:1,column:0},end:{line:11,column:2}},\\\\\\"1\\\\\\":{start:{line:4,column:4},end:{line:4,column:18}},\\\\\\"2\\\\\\":{start:{line:8,column:4},end:{line:8,column:23}}},fnMap:{\\\\\\"0\\\\\\":{name:\\\\\\"(anonymous_0)\\\\\\",decl:{start:{line:3,column:2},end:{line:3,column:3}},loc:{start:{line:3,column:8},end:{line:5,column:3}},line:3},\\\\\\"1\\\\\\":{name:\\\\\\"(anonymous_1)\\\\\\",decl:{start:{line:7,column:2},end:{line:7,column:3}},loc:{start:{line:7,column:8},end:{line:9,column:3}},line:7}},branchMap:{},s:{\\\\\\"0\\\\\\":0,\\\\\\"1\\\\\\":0,\\\\\\"2\\\\\\":0},f:{\\\\\\"0\\\\\\":0,\\\\\\"1\\\\\\":0},b:{},_coverageSchema:\\\\\\"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c\\\\\\"},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();++cov_2obfoewtj5.s[0];module.exports=class Foo{bar(){++cov_2obfoewtj5.f[0];++cov_2obfoewtj5.s[1];return!!this;}baz(){++cov_2obfoewtj5.f[1];++cov_2obfoewtj5.s[2];return!this.bar();}};\\\\n\\\\n\\\\n//////////////////\\\\n// WEBPACK FOOTER\\\\n// ./test/fixtures/basic.js\\\\n// module id = 0\\\\n// module chunks = 0\\"],\\"sourceRoot\\":\\"\\"}"`;
+exports[`disabled sourcemaps 1`] = `"{\\"version\\":3,\\"sources\\":[\\"webpack:///./test/fixtures/basic.js\\"],\\"names\\":[],\\"mappings\\":\\";;;;AAAA,8BAA8B,oJAAoJ,wCAAwC,KAAK,OAAO,gBAAgB,MAAM,kBAAkB,MAAM,OAAO,gBAAgB,MAAM,kBAAkB,MAAM,OAAO,gBAAgB,MAAM,mBAAmB,QAAQ,KAAK,2BAA2B,OAAO,gBAAgB,MAAM,iBAAiB,MAAM,OAAO,gBAAgB,MAAM,iBAAiB,QAAQ,MAAM,2BAA2B,OAAO,gBAAgB,MAAM,iBAAiB,MAAM,OAAO,gBAAgB,MAAM,iBAAiB,SAAS,aAAa,IAAI,kBAAkB,IAAI,YAAY,KAAK,4DAA4D,sCAAsC,EAAE,+CAA+C,uBAAuB,uBAAuB,oCAAoC,GAAG,sBAAsB,yBAAyB,MAAM,sBAAsB,sBAAsB,cAAc,MAAM,sBAAsB,sBAAsB,qB\\",\\"file\\":\\"main.js\\",\\"sourcesContent\\":[\\"var cov_1v2zerd2hz=function(){var path=\\\\\\"/fixtures/basic.js\\\\\\",hash=\\\\\\"f67bc5731c59e70932ca6e13967f6329cc8682d3\\\\\\",global=new Function('return this')(),gcv=\\\\\\"__coverage__\\\\\\",coverageData={path:\\\\\\"/fixtures/basic.js\\\\\\",statementMap:{\\\\\\"0\\\\\\":{start:{line:1,column:0},end:{line:11,column:2}},\\\\\\"1\\\\\\":{start:{line:4,column:4},end:{line:4,column:18}},\\\\\\"2\\\\\\":{start:{line:8,column:4},end:{line:8,column:23}}},fnMap:{\\\\\\"0\\\\\\":{name:\\\\\\"(anonymous_0)\\\\\\",decl:{start:{line:3,column:2},end:{line:3,column:3}},loc:{start:{line:3,column:8},end:{line:5,column:3}},line:3},\\\\\\"1\\\\\\":{name:\\\\\\"(anonymous_1)\\\\\\",decl:{start:{line:7,column:2},end:{line:7,column:3}},loc:{start:{line:7,column:8},end:{line:9,column:3}},line:7}},branchMap:{},s:{\\\\\\"0\\\\\\":0,\\\\\\"1\\\\\\":0,\\\\\\"2\\\\\\":0},f:{\\\\\\"0\\\\\\":0,\\\\\\"1\\\\\\":0},b:{},_coverageSchema:\\\\\\"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c\\\\\\"},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();++cov_1v2zerd2hz.s[0];module.exports=class Foo{bar(){++cov_1v2zerd2hz.f[0];++cov_1v2zerd2hz.s[1];return!!this;}baz(){++cov_1v2zerd2hz.f[1];++cov_1v2zerd2hz.s[2];return!this.bar();}};\\\\n\\\\n\\\\n//////////////////\\\\n// WEBPACK FOOTER\\\\n// ./test/fixtures/basic.js\\\\n// module id = 0\\\\n// module chunks = 0\\"],\\"sourceRoot\\":\\"\\"}"`;
 
 exports[`errors 1`] = `Array []`;
 
 exports[`errors 2`] = `Array []`;
 
 exports[`instrument code 1`] = `
-"/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = \\"\\";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
+"webpackJsonp([0],[
 /* 0 */
 /***/ (function(module, exports) {
 
-var cov_2obfoewtj5=function(){var path=\\"/fixtures/basic.js\\",hash=\\"d160bda36fc8432c2ffbb2cefc3c20475fdbdbec\\",global=new Function('return this')(),gcv=\\"__coverage__\\",coverageData={path:\\"/fixtures/basic.js\\",statementMap:{\\"0\\":{start:{line:1,column:0},end:{line:11,column:2}},\\"1\\":{start:{line:4,column:4},end:{line:4,column:18}},\\"2\\":{start:{line:8,column:4},end:{line:8,column:23}}},fnMap:{\\"0\\":{name:\\"(anonymous_0)\\",decl:{start:{line:3,column:2},end:{line:3,column:3}},loc:{start:{line:3,column:8},end:{line:5,column:3}},line:3},\\"1\\":{name:\\"(anonymous_1)\\",decl:{start:{line:7,column:2},end:{line:7,column:3}},loc:{start:{line:7,column:8},end:{line:9,column:3}},line:7}},branchMap:{},s:{\\"0\\":0,\\"1\\":0,\\"2\\":0},f:{\\"0\\":0,\\"1\\":0},b:{},_coverageSchema:\\"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c\\"},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();++cov_2obfoewtj5.s[0];module.exports=class Foo{bar(){++cov_2obfoewtj5.f[0];++cov_2obfoewtj5.s[1];return!!this;}baz(){++cov_2obfoewtj5.f[1];++cov_2obfoewtj5.s[2];return!this.bar();}};
+var cov_1v2zerd2hz=function(){var path=\\"/fixtures/basic.js\\",hash=\\"f67bc5731c59e70932ca6e13967f6329cc8682d3\\",global=new Function('return this')(),gcv=\\"__coverage__\\",coverageData={path:\\"/fixtures/basic.js\\",statementMap:{\\"0\\":{start:{line:1,column:0},end:{line:11,column:2}},\\"1\\":{start:{line:4,column:4},end:{line:4,column:18}},\\"2\\":{start:{line:8,column:4},end:{line:8,column:23}}},fnMap:{\\"0\\":{name:\\"(anonymous_0)\\",decl:{start:{line:3,column:2},end:{line:3,column:3}},loc:{start:{line:3,column:8},end:{line:5,column:3}},line:3},\\"1\\":{name:\\"(anonymous_1)\\",decl:{start:{line:7,column:2},end:{line:7,column:3}},loc:{start:{line:7,column:8},end:{line:9,column:3}},line:7}},branchMap:{},s:{\\"0\\":0,\\"1\\":0,\\"2\\":0},f:{\\"0\\":0,\\"1\\":0},b:{},_coverageSchema:\\"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c\\"},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();++cov_1v2zerd2hz.s[0];module.exports=class Foo{bar(){++cov_1v2zerd2hz.f[0];++cov_1v2zerd2hz.s[1];return!!this;}baz(){++cov_1v2zerd2hz.f[1];++cov_1v2zerd2hz.s[2];return!this.bar();}};
 
 /***/ })
-/******/ ]);"
+],[0]);"
 `;
 
-exports[`sourcemap files on by default 1`] = `"{\\"version\\":3,\\"sources\\":[\\"webpack:///webpack/bootstrap 1ae028e11f9e6449a2dd\\",\\"webpack:///./test/fixtures/basic.js\\"],\\"names\\":[\\"module\\",\\"exports\\",\\"Foo\\",\\"bar\\",\\"baz\\"],\\"mappings\\":\\";AAAA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;;;AAGA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,aAAK;AACL;AACA;;AAEA;AACA;AACA;AACA,mCAA2B,0BAA0B,EAAE;AACvD,yCAAiC,eAAe;AAChD;AACA;AACA;;AAEA;AACA,8DAAsD,+DAA+D;;AAErH;AACA;;AAEA;AACA;;;;;;;mlCC7DAA,OAAOC,OAAP,CAAiB,KAAMC,IAAI,CAEzBC,KAAM,6CACJ,MAAO,CAAC,CAAC,IAAT,CACD,CAEDC,KAAM,6CACJ,MAAO,CAAC,KAAKD,GAAL,EAAR,CACD,CARwB,CAA3B,C\\",\\"file\\":\\"main.js\\",\\"sourcesContent\\":[\\" \\\\t// The module cache\\\\n \\\\tvar installedModules = {};\\\\n\\\\n \\\\t// The require function\\\\n \\\\tfunction __webpack_require__(moduleId) {\\\\n\\\\n \\\\t\\\\t// Check if module is in cache\\\\n \\\\t\\\\tif(installedModules[moduleId]) {\\\\n \\\\t\\\\t\\\\treturn installedModules[moduleId].exports;\\\\n \\\\t\\\\t}\\\\n \\\\t\\\\t// Create a new module (and put it into the cache)\\\\n \\\\t\\\\tvar module = installedModules[moduleId] = {\\\\n \\\\t\\\\t\\\\ti: moduleId,\\\\n \\\\t\\\\t\\\\tl: false,\\\\n \\\\t\\\\t\\\\texports: {}\\\\n \\\\t\\\\t};\\\\n\\\\n \\\\t\\\\t// Execute the module function\\\\n \\\\t\\\\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\\\\n\\\\n \\\\t\\\\t// Flag the module as loaded\\\\n \\\\t\\\\tmodule.l = true;\\\\n\\\\n \\\\t\\\\t// Return the exports of the module\\\\n \\\\t\\\\treturn module.exports;\\\\n \\\\t}\\\\n\\\\n\\\\n \\\\t// expose the modules object (__webpack_modules__)\\\\n \\\\t__webpack_require__.m = modules;\\\\n\\\\n \\\\t// expose the module cache\\\\n \\\\t__webpack_require__.c = installedModules;\\\\n\\\\n \\\\t// define getter function for harmony exports\\\\n \\\\t__webpack_require__.d = function(exports, name, getter) {\\\\n \\\\t\\\\tif(!__webpack_require__.o(exports, name)) {\\\\n \\\\t\\\\t\\\\tObject.defineProperty(exports, name, {\\\\n \\\\t\\\\t\\\\t\\\\tconfigurable: false,\\\\n \\\\t\\\\t\\\\t\\\\tenumerable: true,\\\\n \\\\t\\\\t\\\\t\\\\tget: getter\\\\n \\\\t\\\\t\\\\t});\\\\n \\\\t\\\\t}\\\\n \\\\t};\\\\n\\\\n \\\\t// getDefaultExport function for compatibility with non-harmony modules\\\\n \\\\t__webpack_require__.n = function(module) {\\\\n \\\\t\\\\tvar getter = module && module.__esModule ?\\\\n \\\\t\\\\t\\\\tfunction getDefault() { return module['default']; } :\\\\n \\\\t\\\\t\\\\tfunction getModuleExports() { return module; };\\\\n \\\\t\\\\t__webpack_require__.d(getter, 'a', getter);\\\\n \\\\t\\\\treturn getter;\\\\n \\\\t};\\\\n\\\\n \\\\t// Object.prototype.hasOwnProperty.call\\\\n \\\\t__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };\\\\n\\\\n \\\\t// __webpack_public_path__\\\\n \\\\t__webpack_require__.p = \\\\\\"\\\\\\";\\\\n\\\\n \\\\t// Load entry module and return exports\\\\n \\\\treturn __webpack_require__(__webpack_require__.s = 0);\\\\n\\\\n\\\\n\\\\n// WEBPACK FOOTER //\\\\n// webpack/bootstrap 1ae028e11f9e6449a2dd\\",\\"module.exports = class Foo {\\\\n\\\\n  bar() {\\\\n    return !!this;\\\\n  }\\\\n\\\\n  baz() {\\\\n    return !this.bar();\\\\n  }\\\\n\\\\n};\\\\n\\\\n\\\\n\\\\n// WEBPACK FOOTER //\\\\n// ./test/fixtures/basic.js\\"],\\"sourceRoot\\":\\"\\"}"`;
+exports[`sourcemap files on by default 1`] = `"{\\"version\\":3,\\"sources\\":[\\"webpack:////fixtures/basic.js\\"],\\"names\\":[\\"module\\",\\"exports\\",\\"Foo\\",\\"bar\\",\\"baz\\"],\\"mappings\\":\\";;;;68BAAAA,OAAOC,OAAP,CAAiB,KAAMC,IAAI,CAEzBC,KAAM,6CACJ,MAAO,CAAC,CAAC,IAAT,CACD,CAEDC,KAAM,6CACJ,MAAO,CAAC,KAAKD,GAAL,EAAR,CACD,CARwB,CAA3B,C\\",\\"file\\":\\"main.js\\",\\"sourcesContent\\":[\\"module.exports = class Foo {\\\\n\\\\n  bar() {\\\\n    return !!this;\\\\n  }\\\\n\\\\n  baz() {\\\\n    return !this.bar();\\\\n  }\\\\n\\\\n};\\\\n\\\\n\\\\n\\\\n// WEBPACK FOOTER //\\\\n// /fixtures/basic.js\\"],\\"sourceRoot\\":\\"\\"}"`;
 
 exports[`warnings 1`] = `Array []`;
 
