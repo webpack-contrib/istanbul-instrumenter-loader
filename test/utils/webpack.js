@@ -13,6 +13,9 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
     module: {
       rules: [{
         test: /\.js$/,
+        loader: 'babel-loader',
+      }, {
+        test: /\.js$/,
         loader,
         enforce: 'post',
         options,
