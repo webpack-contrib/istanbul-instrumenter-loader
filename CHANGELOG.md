@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0-rc.0"></a>
+# [3.0.0-rc.0](https://github.com/webpack-contrib/istanbul-instrumenter-loader/compare/v3.0.0-beta.1...v3.0.0-rc.0) (2017-07-12)
+
+
+### Bug Fixes
+
+* **index:** correct loader sourcemaps usage (#67) ([691b565](https://github.com/webpack-contrib/istanbul-instrumenter-loader/commit/691b565))
+
+
+
 <a name="3.0.0-beta.1"></a>
 # [3.0.0-beta.1](https://github.com/webpack-contrib/istanbul-instrumenter-loader/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2017-07-10)
 
