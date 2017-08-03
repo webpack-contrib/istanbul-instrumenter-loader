@@ -22,6 +22,13 @@ export default function (source, sourceMap) {
   const instrumenter = createInstrumenter(options);
 
   instrumenter.instrument(source, this.resourcePath, (error, instrumentedSource) => {
-    this.callback(error, instrumentedSource, instrumenter.lastSourceMap());
+    let src = instrumentedSource;
+    if (options.fixWebpackSourcePaths) {
+      src = src.replace(/sources:\[([^\]])*\]/g, (match) => {
+        const splits = match.split('!');
+        return `sources:['${splits[splits.length - 1]}`;
+      });
+    }
+    this.callback(error, src, instrumenter.lastSourceMap());
   }, srcMap);
 }
