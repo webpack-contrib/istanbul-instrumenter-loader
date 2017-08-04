@@ -25,8 +25,8 @@ export default function (source, sourceMap) {
     let src = instrumentedSource;
     if (options.fixWebpackSourcePaths) {
       src = src.replace(/sources:\[([^\]])*\]/g, (match) => {
-        const splits = match.split('!');
-        return `sources:['${splits[splits.length - 1]}`;
+        const splits = match.replace('sources:[', '').split('!');
+        return `sources:[${splits[splits.length - 1]}`;
       });
     }
     this.callback(error, src, instrumenter.lastSourceMap());
