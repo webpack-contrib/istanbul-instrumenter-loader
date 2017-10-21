@@ -14,7 +14,7 @@
     "schema-utils": "^0.3.0"
   },
   "engines": {
-    "node": ">= 4.3 < 5.0.0 || >= 5.10"
+    "node": ">= 4.8 < 5.0.0 || >= 5.10"
   },
   "license": "MIT",
   "scripts": {
@@ -38,25 +38,25 @@
     "webpack-defaults": "webpack-defaults"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-jest": "^20.0.3",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "cross-env": "^5.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.0",
     "del-cli": "^1.1.0",
-    "eslint": "^4.2.0",
+    "eslint": "^4.9.0",
     "eslint-config-webpack": "^1.2.5",
-    "eslint-plugin-import": "^2.7.0",
-    "jest": "^20.0.4",
-    "lint-staged": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.3.0",
     "memory-fs": "^0.4.1",
-    "nsp": "^2.6.3",
+    "nsp": "^2.8.1",
     "pre-commit": "^1.2.2",
     "standard-version": "^4.2.0",
-    "webpack": "^3.1.0",
-    "webpack-defaults": "^1.5.0"
+    "webpack": "^3.8.1",
+    "webpack-defaults": "^1.6.0"
   },
   "homepage": "https://github.com/webpack-contrib/istanbul-instrumenter-loader",
   "repository": "https://github.com/webpack-contrib/istanbul-instrumenter-loader.git",
