@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/webpack-contrib/istanbul-instrumenter-loader/compare/v3.0.0...v3.0.1) (2018-03-09)
+
+
+### Bug Fixes
+
+* **package:** add `webpack >= v4.0.0` (`peerDependencies`) ([#84](https://github.com/webpack-contrib/istanbul-instrumenter-loader/issues/84)) ([00e20a4](https://github.com/webpack-contrib/istanbul-instrumenter-loader/commit/00e20a4))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/webpack-contrib/istanbul-instrumenter-loader/compare/v2.0.0...v3.0.0) (2017-07-26)
 
