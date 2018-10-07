@@ -32,3 +32,16 @@ test('disabled sourcemaps', async () => {
   expect(stats.compilation.errors).toMatchSnapshot('errors');
   expect(stats.compilation.warnings).toMatchSnapshot('warnings');
 });
+
+test('fix webpack paths', async () => {
+  const stats = await webpack({
+    extend: {
+      devtool: 'source-map',
+    },
+    options: {
+      fixWebpackSourcePaths: true,
+    },
+  });
+  const instrumentedSource = stats.compilation.assets['main.js'].source();
+  expect(instrumentedSource).toMatchSnapshot();
+});

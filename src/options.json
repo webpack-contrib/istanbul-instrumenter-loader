@@ -21,6 +21,9 @@
     },
     "produceSourceMap": {
       "type": "boolean"
+    },
+    "fixWebpackSourcePaths": {
+      "type": "boolean"
     }
   },
   "additionalProperties": true

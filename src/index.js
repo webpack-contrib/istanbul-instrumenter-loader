@@ -22,6 +22,18 @@ export default function (source, sourceMap) {
   const instrumenter = createInstrumenter(options);
 
   instrumenter.instrument(source, this.resourcePath, (error, instrumentedSource) => {
-    this.callback(error, instrumentedSource, instrumenter.lastSourceMap());
+    let src = instrumentedSource;
+    if (options.fixWebpackSourcePaths) {
+      src = src.replace(/sources:\[([^\]])*\]/g, (match) => {
+        const lines = match.slice('sources:['.length, -1).split(',');
+        return `sources:[${
+          lines
+            .map(l => l.slice(1, -1).split('!'))
+            .map(arr => `"${arr[arr.length - 1]}"`)
+            .join(',')
+        }]`;
+      });
+    }
+    this.callback(error, src, instrumenter.lastSourceMap());
   }, srcMap);
 }

@@ -124,6 +124,7 @@ The loader supports all options supported by `istanbul-lib-instrument`
 |**`coverageVariable`**|`{String}`|`__coverage__`|Name of global coverage variable|
 |**`preserveComments`**|`{Boolean}`|`false`|Preserve comments in `output`|
 |**`produceSourceMap`**|`{Boolean}`|`false`|Set to `true` to produce a source map for the instrumented code|
+|**`fixWebpackSourcePaths`**|`{Boolean}`|`false`|Set to `true` to prevent filepath error in coverage|
 |**`sourceMapUrlCallback`**|`{Function}`|`null`|A callback function that is called when a source map URL is found in the original code. This function is called with the source filename and the source map URL|
 
 **webpack.config.js**
