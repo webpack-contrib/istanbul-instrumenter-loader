@@ -25,8 +25,13 @@ export default function (source, sourceMap) {
     let src = instrumentedSource;
     if (options.fixWebpackSourcePaths) {
       src = src.replace(/sources:\[([^\]])*\]/g, (match) => {
-        const splits = match.replace('sources:[', '').split('!');
-        return `sources:[${splits[splits.length - 1]}`;
+        const lines = match.slice('sources:['.length, -1).split(',');
+        return `sources:[${
+          lines
+            .map(l => l.slice(1, -1).split('!'))
+            .map(arr => `"${arr[arr.length - 1]}"`)
+            .join(',')
+        }]`;
       });
     }
     this.callback(error, src, instrumenter.lastSourceMap());
