@@ -2,6 +2,11 @@ module.exports = {
   root: true,
   plugins: ['prettier'],
   extends: ['@webpack-contrib/eslint-config-webpack'],
+  parserOptions: {
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
+  },
   rules: {
     'prettier/prettier': [
       'error',

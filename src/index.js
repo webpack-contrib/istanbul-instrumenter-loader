@@ -2,11 +2,15 @@ import { createInstrumenter } from 'istanbul-lib-instrument';
 import loaderUtils from 'loader-utils';
 import validateOptions from 'schema-utils';
 import convert from 'convert-source-map';
+
 /* eslint-disable-line */
 const schema = require('./options');
 
-export default function (source, sourceMap) {
-  const options = Object.assign({ produceSourceMap: true }, loaderUtils.getOptions(this));
+export default function(source, sourceMap) {
+  const options = Object.assign(
+    { produceSourceMap: true },
+    loaderUtils.getOptions(this)
+  );
 
   validateOptions(schema, options, 'Istanbul Instrumenter Loader');
 
@@ -21,7 +25,12 @@ export default function (source, sourceMap) {
 
   const instrumenter = createInstrumenter(options);
 
-  instrumenter.instrument(source, this.resourcePath, (error, instrumentedSource) => {
-    this.callback(error, instrumentedSource, instrumenter.lastSourceMap());
-  }, srcMap);
+  instrumenter.instrument(
+    source,
+    this.resourcePath,
+    (error, instrumentedSource) => {
+      this.callback(error, instrumentedSource, instrumenter.lastSourceMap());
+    },
+    srcMap
+  );
 }
