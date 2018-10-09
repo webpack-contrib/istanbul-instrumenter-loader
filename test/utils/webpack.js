@@ -7,6 +7,7 @@ const loader = require.resolve('./loader');
 
 export default function({ fixture = 'basic.js', options, extend = {} } = {}) {
   const config = {
+    mode: 'development',
     entry: path.join(__dirname, '..', 'fixtures', fixture),
     output: {
       path: path.join(__dirname, '..', 'fixtures', 'dist'),
@@ -26,11 +27,11 @@ export default function({ fixture = 'basic.js', options, extend = {} } = {}) {
       ],
     },
     ...extend,
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin({
+    optimization: {
+      runtimeChunk: {
         name: 'manifest',
-      }),
-    ],
+      },
+    },
   };
 
   return new Promise((resolve, reject) => {
