@@ -21,7 +21,7 @@ Instrument JS files with [istanbul-lib-instrument](https://github.com/istanbuljs
 npm i -D istanbul-instrumenter-loader
 ```
 
-<h2 align="center"><a href="https://webpack.js.org/concepts/loaders">Usage</a></h2>
+<h2 align="center">Usage</h2>
 
 ### `References`
 
@@ -111,7 +111,7 @@ You must run the instrumentation as a post step
 }
 ```
 
-<h2 align="center"><a href="https://github.com/istanbuljs/istanbuljs/blob/master/packages/istanbul-lib-instrument/api.md#instrumenter">Options</a></h2>
+<h2 align="center">Options</h2>
 
 The loader supports all options supported by `istanbul-lib-instrument`
 
