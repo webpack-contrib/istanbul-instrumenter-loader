@@ -96,7 +96,7 @@ config.set({
 
 ### with `Babel`
 
-You must run the instrumentation as a post step
+You must run the instrumentation as a pre step
 
 **webpack.config.js**
 ```js
@@ -106,7 +106,7 @@ You must run the instrumentation as a post step
     loader: 'istanbul-instrumenter-loader',
     options: { esModules: true }
   },
-  enforce: 'post',
+  enforce: 'pre',
   exclude: /node_modules|\.spec\.js$/,
 }
 ```
