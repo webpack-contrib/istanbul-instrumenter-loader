@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Errors Options Validation Error 1`] = `
-"Validation Error
-
-Istanbul Instrumenter Loader Invalid Options
+"Istanbul Instrumenter Loader Invalid Options
 
 options.debug should be boolean
 "

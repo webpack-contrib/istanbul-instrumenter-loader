@@ -8,13 +8,13 @@
     "dist"
   ],
   "dependencies": {
-    "convert-source-map": "^1.5.0",
-    "istanbul-lib-instrument": "^1.7.3",
-    "loader-utils": "^1.1.0",
-    "schema-utils": "^0.3.0"
+    "convert-source-map": "^1.6.0",
+    "istanbul-lib-instrument": "^3.3.0",
+    "loader-utils": "^1.2.3",
+    "schema-utils": "^1.0.0"
   },
   "engines": {
-    "node": ">= 4.8 < 5.0.0 || >= 5.10"
+    "node": ">= 8"
   },
   "license": "MIT",
   "scripts": {
@@ -27,12 +27,11 @@
     "prebuild": "npm run clean",
     "prepublish": "npm run build",
     "release": "standard-version",
-    "security": "nsp check",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "travis:coverage": "npm run test:coverage -- --runInBand",
-    "travis:lint": "npm run lint && npm run security",
+    "travis:lint": "npm run lint",
     "travis:test": "npm run test -- --runInBand",
     "appveyor:test": "npm run test",
     "webpack-defaults": "webpack-defaults"
@@ -52,10 +51,9 @@
     "jest": "^21.2.1",
     "lint-staged": "^4.3.0",
     "memory-fs": "^0.4.1",
-    "nsp": "^2.8.1",
     "pre-commit": "^1.2.2",
     "standard-version": "^4.2.0",
-    "webpack": "^3.8.1",
+    "webpack": "^4.32.2",
     "webpack-defaults": "^1.6.0"
   },
   "homepage": "https://github.com/webpack-contrib/istanbul-instrumenter-loader",
