@@ -1,6 +1,6 @@
 {
   "name": "istanbul-instrumenter-loader",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Istanbul instrumenter loader for webpack",
   "author": "Kir Belevich (@deepsweet)",
   "main": "dist/cjs.js",
