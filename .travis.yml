@@ -10,21 +10,22 @@ jobs:
     - env: WEBPACK_VERSION=canary
   include:
     - &test-latest
-      stage: Webpack latest
+      stage: Webpack 3.8.1
       node_js: 6
-      env: WEBPACK_VERSION=latest JOB_PART=test
+      env: WEBPACK_VERSION=3.8.1 JOB_PART=test
       script: npm run travis:$JOB_PART
     - <<: *test-latest
       node_js: 4.8
-      env: WEBPACK_VERSION=latest JOB_PART=test
+      env: WEBPACK_VERSION=3.8.1 JOB_PART=test
       script: npm run travis:$JOB_PART
     - <<: *test-latest
       node_js: 8
-      env: WEBPACK_VERSION=latest JOB_PART=lint
+      env: WEBPACK_VERSION=3.8.1 JOB_PART=lint
+      before_script: npm i -g npm@^6.0.0 && npm --version
       script: npm run travis:$JOB_PART
     - <<: *test-latest
       node_js: 8
-      env: WEBPACK_VERSION=latest JOB_PART=coverage
+      env: WEBPACK_VERSION=3.8.1 JOB_PART=coverage
       script: npm run travis:$JOB_PART
       after_success: 'bash <(curl -s https://codecov.io/bash)'
     - stage: Webpack canary
