@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "convert-source-map": "^1.5.0",
-    "istanbul-lib-instrument": "^1.7.3",
+    "istanbul-lib-instrument": "^1.9.2",
     "loader-utils": "^1.1.0",
     "schema-utils": "^0.3.0"
   },
