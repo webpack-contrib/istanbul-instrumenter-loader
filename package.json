@@ -30,7 +30,7 @@
     "security": "npm audit --json --audit-level high | npm-audit-helper --prod-only",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverageFrom=src/**/*.js --coverage",
+    "test:coverage": "jest --collectCoverageFrom=\"src/**/*.js\" --coverage",
     "travis:coverage": "npm run test:coverage -- --runInBand",
     "travis:lint": "npm run lint && npm run security",
     "travis:test": "npm run test -- --runInBand",
