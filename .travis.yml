@@ -19,6 +19,10 @@ jobs:
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
     - <<: *test-latest
+      node_js: 12
+      env: WEBPACK_VERSION=latest JOB_PART=test
+      script: npm run travis:$JOB_PART
+    - <<: *test-latest
       node_js: 14
       env: WEBPACK_VERSION=latest JOB_PART=lint
       script: npm run travis:$JOB_PART
