@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Errors Options Validation Error 1`] = `
-"Validation Error
-
-Istanbul Instrumenter Loader Invalid Options
-
-options.debug should be boolean
-"
+"Invalid options object. Istanbul Instrumenter Loader has been initialized using an options object that does not match the API schema.
+ - options.debug should be a boolean."
 `;
