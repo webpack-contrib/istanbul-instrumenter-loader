@@ -32,7 +32,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "travis:coverage": "npm run test:coverage -- --runInBand",
-    "travis:lint": "npm run lint && npm run security",
+    "travis:lint": "npm run lint",
+    "travis:security": "npm run security",
     "travis:test": "npm run test -- --runInBand",
     "appveyor:test": "npm run test",
     "webpack-defaults": "webpack-defaults"
