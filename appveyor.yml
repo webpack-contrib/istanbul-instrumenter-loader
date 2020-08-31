@@ -11,9 +11,6 @@ environment:
     - nodejs_version: '10'
       webpack_version: latest
       job_part: test
-    - nodejs_version: '12'
-      webpack_version: latest
-      job_part: test
     - nodejs_version: '14'
       webpack_version: latest
       job_part: test
