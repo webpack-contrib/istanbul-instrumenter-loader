@@ -10,7 +10,7 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
     entry: path.join(__dirname, '..', 'fixtures', fixture),
     output: {
       path: path.join(__dirname, '..', 'fixtures', 'dist'),
-      futureEmitAssets: false,
+      devtoolModuleFilenameTemplate: '[resource-path]',
     },
     module: {
       rules: [{
@@ -33,12 +33,13 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
 
   return new Promise((resolve, reject) => {
     const compiler = webpack(config);
-    compiler.outputFileSystem = new MemoryFileSystem();
+    const filesystem = new MemoryFileSystem();
+    compiler.outputFileSystem = filesystem;
     compiler.run((err, stats) => {
       if (err) {
         return reject(err);
       }
-      return resolve(stats);
+      return resolve({ stats, filesystem });
     });
   });
 }
