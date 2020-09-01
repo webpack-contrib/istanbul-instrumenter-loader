@@ -16,15 +16,6 @@ export default function webpackConfig({ fixture = 'basic.js', options, extend = 
       rules: [{
         test: /\.js$/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/env', {
-              targets: {
-                browsers: 'ie 11'
-              }
-            }]
-          ]
-        }
       }, {
         test: /\.js$/,
         loader,
