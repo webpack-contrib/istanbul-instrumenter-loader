@@ -1,3 +1,3 @@
 {
-  "extends": "webpack"
+  "extends": "@webpack-contrib/webpack"
 }
