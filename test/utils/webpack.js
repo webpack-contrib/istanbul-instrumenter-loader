@@ -10,6 +10,7 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
     entry: path.join(__dirname, '..', 'fixtures', fixture),
     output: {
       path: path.join(__dirname, '..', 'fixtures', 'dist'),
+      futureEmitAssets: false,
     },
     module: {
       rules: [{
