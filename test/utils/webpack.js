@@ -1,11 +1,10 @@
 import path from 'path';
-
 import webpack from 'webpack';
 import MemoryFileSystem from 'memory-fs';
 
 const loader = require.resolve('./loader');
 
-export default function webpackConfig({ fixture = 'basic.js', options, extend = {} } = {}) {
+export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
   const config = {
     mode: 'none',
     entry: path.join(__dirname, '..', 'fixtures', fixture),

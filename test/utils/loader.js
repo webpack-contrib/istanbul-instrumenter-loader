@@ -1,5 +1,4 @@
 import path from 'path';
-
 import loader from '../../src/cjs';
 
 const normalize = str => str.split(path.sep).join('/');
