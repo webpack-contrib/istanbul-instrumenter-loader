@@ -5,9 +5,6 @@ init:
   - git config --global core.autocrlf input
 environment:
   matrix:
-    - nodejs_version: '8'
-      webpack_version: latest
-      job_part: test
     - nodejs_version: '10'
       webpack_version: latest
       job_part: test
