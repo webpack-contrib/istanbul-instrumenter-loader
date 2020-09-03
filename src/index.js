@@ -8,7 +8,10 @@ const schema = require('./options');
 export default function (source, sourceMap) {
   const options = Object.assign({ produceSourceMap: true }, loaderUtils.getOptions(this));
 
-  validateOptions(schema, options, 'Istanbul Instrumenter Loader');
+  validateOptions(schema, options, {
+    name: 'Istanbul Instrumenter Loader',
+    baseDataPath: 'options',
+  });
 
   let srcMap = sourceMap;
   // use inline source map, if any

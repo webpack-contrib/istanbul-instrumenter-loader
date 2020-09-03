@@ -6,9 +6,11 @@ const loader = require.resolve('./loader');
 
 export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
   const config = {
+    mode: 'none',
     entry: path.join(__dirname, '..', 'fixtures', fixture),
     output: {
       path: path.join(__dirname, '..', 'fixtures', 'dist'),
+      devtoolModuleFilenameTemplate: '[resource-path]',
     },
     module: {
       rules: [{
@@ -21,22 +23,23 @@ export default function ({ fixture = 'basic.js', options, extend = {} } = {}) {
         options,
       }],
     },
+    optimization: {
+      runtimeChunk: {
+        name: 'runtime',
+      },
+    },
     ...extend,
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest',
-      }),
-    ],
   };
 
   return new Promise((resolve, reject) => {
     const compiler = webpack(config);
-    compiler.outputFileSystem = new MemoryFileSystem();
+    const filesystem = new MemoryFileSystem();
+    compiler.outputFileSystem = filesystem;
     compiler.run((err, stats) => {
       if (err) {
         return reject(err);
       }
-      return resolve(stats);
+      return resolve({ stats, filesystem });
     });
   });
 }
