@@ -54,7 +54,7 @@
     "lint-staged": "^4.3.0",
     "memory-fs": "^0.4.1",
     "pre-commit": "^1.2.2",
-    "standard-version": "^4.2.0",
+    "standard-version": "^8.0.1",
     "webpack": "^4.44.1",
     "webpack-defaults": "^4.0.0"
   },
